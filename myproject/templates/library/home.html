@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Home</title>    
+{% endblock title %}
+
+<!-- home page -->
+{% block body %}
+{% include 'messages.html' %}
+
+{% if request.user.is_authenticated %}
+<h3 class="text-center text-warning"> hii {{request.user.first_Name }}</h3>>
+{% endif %}
+
+    <h1 class="text-center text-info">Welcome To E-Library!!!</h1>
+    <h3 class="text-center">Let's add new books</h3>
+{% endblock body %}
